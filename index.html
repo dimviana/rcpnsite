@@ -3,22 +3,7 @@
   <head>
     <style>
       .card {
-        position: absolute;
-        width: 400px;
-        height: 400px;
-        margin: 1em;
-        background: rgba(255, 255, 255, 0.05);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        border-radius: 15px;
-        display: inline-flex;
-        backdrop-filter: blur(40px);
-
-        border: solid 2px transparent;
-        background-clip: padding-box;
-        box-shadow: 0px 10px 10px rgba(46, 54, 68, 0.03);
-      }
-      .card2 {
-        position: absolute;
+        position: relative;
         width: 400px;
         height: 400px;
         margin: 1em;
@@ -7104,7 +7089,7 @@
                         class="attachment-full size-full wp-image-36"
                         sizes="(max-width: 750px) 100vw, 750px" /></noscript
                     ><a
-                      href="https://www.tjpe.jus.br/documents/29010/2155532/DJ231_2022-ASSINADO+%28Emolumentos+-+Custas+2023%29.pdf/1ea53349-352c-c0d3-1e58-1d32f8d5175a"
+                      href="https://portal.tjpe.jus.br/documents/d/corregedoria/emolumentos-custas-2024-pdf/1ea53349-352c-c0d3-1e58-1d32f8d5175a"
                       target="_blank"
                       ><img
                         loading="lazy"
@@ -7482,41 +7467,7 @@
             data-id="msjaXHfp"
             data-element_type="widget"
             data-widget_type="image-box.default"
-          >
-            <div class="elementor-widget-container">
-              <div class="elementor-image-box-wrapper">
-                <figure class="elementor-image-box-img">
-                  <noscript
-                    ><img
-                      loading="lazy"
-                      decoding="async"
-                      width="750"
-                      height="750"
-                      src="./images/2023-11-usucapicao_nv.png"
-                      class="attachment-full size-full wp-image-42"
-                      alt=""
-                      sizes="(max-width: 750px) 100vw, 750px" /></noscript
-                  ><img
-                    loading="lazy"
-                    decoding="async"
-                    width="750"
-                    height="750"
-                    src=""
-                    class="lazy attachment-full size-full wp-image-42"
-                    alt=""
-                    data-sizes="(max-width: 750px) 100vw, 750px"
-                  />
-                </figure>
-                <div class="elementor-image-box-content">
-                  <h3 class="elementor-image-box-title">Usucapião</h3>
-                  <p class="elementor-image-box-description">
-                    Modo originário de aquisição da propriedade pela posse
-                    prolongada do bem.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          ></div>
         </div>
       </div>
       <div
@@ -7728,52 +7679,101 @@
       <!--Graficos-->
       <div class="elementor-element">
         <div class="container">
-          <div class="card">
-            <div id="myPlot">
-              <di class="col-6">
-                <script>
-                  const xArray = ['Civil', 'Religioso', 'Total']
-                  const yArray = [55, 40, 95]
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <div id="myPlot">
+                    <di class="col-7">
+                      <script>
+                        const xArray = ['Civil', 'Religioso', 'Total']
+                        const yArray = [55, 40, 95]
 
-                  const layout = { title: 'Casamentos 2023' }
+                        const layout = { title: 'Casamentos 2023' }
 
-                  const data = [
-                    {
-                      labels: xArray,
-                      values: yArray,
-                      hole: 0.4,
-                      type: 'pie'
-                    }
-                  ]
+                        const data = [
+                          {
+                            labels: xArray,
+                            values: yArray,
+                            hole: 0.4,
+                            type: 'pie'
+                          }
+                        ]
 
-                  Plotly.newPlot('myPlot', data, layout)
-                </script>
-              </di>
+                        Plotly.newPlot('myPlot', data, layout)
+                      </script>
+                    </di>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <div id="myPlot2">
+                    <di class="col-9">
+                      <script>
+                        const xArray2 = ['Masculino', 'Feminino', 'Total']
+                        const yArray2 = [55, 40, 95]
+
+                        const layout2 = { title: 'Nascimentos 2023' }
+
+                        const data2 = [
+                          {
+                            labels: xArray2,
+                            values: yArray2,
+                            hole: 0.4,
+                            type: 'pie'
+                          }
+                        ]
+
+                        Plotly.newPlot('myPlot2', data2, layout2)
+                      </script>
+                    </di>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="container">
-          <div class="card2">
-            <div id="myPlot2">
-              <di class="col-6">
-                <script>
-                  const xArray2 = ['Civil', 'Religioso', 'Total']
-                  const yArray2 = [55, 40, 95]
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <div id="myPlot3">
+                    <di class="col-6">
+                      <script>
+                        const xArray3 = ['Civil', 'Religioso', 'Total']
+                        const yArray3 = [55, 40, 95]
 
-                  const layout2 = { title: 'Casamentos 2023' }
+                        const layout3 = { title: 'Casamentos 2023' }
 
-                  const data2 = [
-                    {
-                      labels: xArray2,
-                      values: yArray2,
-                      hole: 0.4,
-                      type: 'pie'
-                    }
-                  ]
+                        const data3 = [
+                          {
+                            labels: xArray3,
+                            values: yArray3,
+                            hole: 0.4,
+                            type: 'pie'
+                          }
+                        ]
 
-                  Plotly.newPlot('myPlot2', data2, layout2)
-                </script>
-              </di>
+                        Plotly.newPlot('myPlot3', data3, layout3)
+                      </script>
+                    </di>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Título especial</h5>
+                  <p class="card-text">
+                    Com suporte a texto embaixo, que funciona como uma
+                    introdução a um conteúdo adicional.
+                  </p>
+                  <a href="#" class="btn btn-primary">Visitar</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -8142,7 +8142,12 @@
                     <li
                       class="a:1:{i:0;s:0:;} menu-item menu-item-type-custom menu-item-object-custom menu-item-63"
                     >
-                      <a href="#" class="twbb-item">Localização</a>
+                      <a
+                        href="https://www.google.com/search?sca_esv=595668565&rlz=1C1ONGR_pt-PTBR1085BR1085&tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=AM9HkKk-DzuIoKNsDZWinnBIL0fqARJyJg:1704376443529&q=cartorio+Civil+Bonito+PE&rflfq=1&num=10&ved=2ahUKEwigouuD8cODAxVzJ7kGHVxTDH0QtgN6BAgTEAI#rlfi=hd:;si:3388738522938809315,l,ChhjYXJ0b3JpbyBDaXZpbCBCb25pdG8gUEVInNzhk6eBgIAIWi4QABABGAAYARgCGAMiGGNhcnRvcmlvIGNpdmlsIGJvbml0byBwZSoGCAMQABABkgEOY2l2aWxfcmVnaXN0cnmqAVUQASoSIg5jYXJ0b3JpbyBjaXZpbCgMMh8QASIbxm9ZX9ekaMEwC-81VRhZMrVXXyOnTQYQWd3oMhwQAiIYY2FydG9yaW8gY2l2aWwgYm9uaXRvIHBl;mv:[[-8.467841190475985,-35.714452397924475],[-8.484098243172847,-35.746638906103186]]"
+                        class="twbb-item"
+                        target="_blank"
+                        >Localização</a
+                      >
                     </li>
                     <li
                       class="a:1:{i:0;s:0:;} menu-item menu-item-type-custom menu-item-object-custom menu-item-64"
@@ -8172,7 +8177,12 @@
                     <li
                       class="a:1:{i:0;s:0:;} menu-item menu-item-type-custom menu-item-object-custom menu-item-63"
                     >
-                      <a href="#" class="twbb-item">Localização</a>
+                      <a
+                        href="https://www.google.com/search?sca_esv=595668565&rlz=1C1ONGR_pt-PTBR1085BR1085&tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=AM9HkKk-DzuIoKNsDZWinnBIL0fqARJyJg:1704376443529&q=cartorio+Civil+Bonito+PE&rflfq=1&num=10&ved=2ahUKEwigouuD8cODAxVzJ7kGHVxTDH0QtgN6BAgTEAI#rlfi=hd:;si:3388738522938809315,l,ChhjYXJ0b3JpbyBDaXZpbCBCb25pdG8gUEVInNzhk6eBgIAIWi4QABABGAAYARgCGAMiGGNhcnRvcmlvIGNpdmlsIGJvbml0byBwZSoGCAMQABABkgEOY2l2aWxfcmVnaXN0cnmqAVUQASoSIg5jYXJ0b3JpbyBjaXZpbCgMMh8QASIbxm9ZX9ekaMEwC-81VRhZMrVXXyOnTQYQWd3oMhwQAiIYY2FydG9yaW8gY2l2aWwgYm9uaXRvIHBl;mv:[[-8.467841190475985,-35.714452397924475],[-8.484098243172847,-35.746638906103186]]"
+                        class="twbb-item"
+                        target="_blank"
+                        >Localização</a
+                      >
                     </li>
                     <li
                       class="a:1:{i:0;s:0:;} menu-item menu-item-type-custom menu-item-object-custom menu-item-64"
@@ -8201,17 +8211,31 @@
                     <li
                       class="a:1:{i:0;s:0:;} menu-item menu-item-type-custom menu-item-object-custom menu-item-65"
                     >
-                      <a href="#" class="twbb-item">Emolumentos</a>
+                      <a
+                        href="https://portal.tjpe.jus.br/documents/d/corregedoria/emolumentos-custas-2024-pdf/"
+                        class="twbb-item"
+                        >Emolumentos</a
+                      >
                     </li>
                     <li
                       class="a:1:{i:0;s:0:;} menu-item menu-item-type-custom menu-item-object-custom menu-item-66"
                     >
-                      <a href="#" class="twbb-item">Serviços Online</a>
+                      <a
+                        href="https://registrocivil.org.br/"
+                        class="twbb-item"
+                        target="_blank"
+                        >Serviços Online</a
+                      >
                     </li>
                     <li
                       class="a:1:{i:0;s:0:;} menu-item menu-item-type-custom menu-item-object-custom menu-item-67"
                     >
-                      <a href="#" class="twbb-item">Contato</a>
+                      <a
+                        href="https://sites.google.com/view/registro-civil-das-pessoas-nat/home"
+                        class="twbb-item"
+                        target="_blank"
+                        >Contato</a
+                      >
                     </li>
                     <li
                       class="a:1:{i:0;s:0:;} menu-item menu-item-type-custom menu-item-object-custom menu-item-68"
@@ -8231,17 +8255,31 @@
                     <li
                       class="a:1:{i:0;s:0:;} menu-item menu-item-type-custom menu-item-object-custom menu-item-65"
                     >
-                      <a href="#" class="twbb-item">Emolumentos</a>
+                      <a
+                        href="https://portal.tjpe.jus.br/documents/d/corregedoria/emolumentos-custas-2024-pdf"
+                        target="_blank"
+                        >Emolumentos</a
+                      >
                     </li>
                     <li
                       class="a:1:{i:0;s:0:;} menu-item menu-item-type-custom menu-item-object-custom menu-item-66"
                     >
-                      <a href="#" class="twbb-item">Serviços Online</a>
+                      <a
+                        href="https://registrocivil.org.br/"
+                        class="twbb-item"
+                        target="_blank"
+                        >Serviços Online</a
+                      >
                     </li>
                     <li
                       class="a:1:{i:0;s:0:;} menu-item menu-item-type-custom menu-item-object-custom menu-item-67"
                     >
-                      <a href="#" class="twbb-item">Contato</a>
+                      <a
+                        href="https://sites.google.com/view/registro-civil-das-pessoas-nat/home"
+                        class="twbb-item"
+                        target="_blank"
+                        >Contato</a
+                      >
                     </li>
                     <li
                       class="a:1:{i:0;s:0:;} menu-item menu-item-type-custom menu-item-object-custom menu-item-68"
