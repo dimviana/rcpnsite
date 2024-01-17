@@ -17,6 +17,217 @@
         background-clip: padding-box;
         box-shadow: 0px 10px 10px rgba(46, 54, 68, 0.03);
       }
+      /* 
+=========================
+Fonts
+=========================
+
+font-family: 'Outfit', sans-serif;
+
+*/
+
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+      /* 
+========================
+Variables
+========================
+*/
+
+      :root {
+        font-size: 15px;
+
+        /* Primary */
+        --var-soft-blue: hsl(215, 51%, 70%);
+        --var-cyan: hsl(178, 100%, 50%);
+        /* Neutral */
+        --var-main-darkest: hsl(217, 54%, 11%);
+        --var-card-dark: hsl(216, 50%, 16%);
+        --var-line-dark: hsl(215, 32%, 27%);
+        --var-lightest: white;
+
+        /* Fonts */
+
+        --var-heading: normal normal 600 1.5em/1.6em 'Outfit', sans-serif;
+
+        --var-small-heading: normal normal 400 1em/1em 'Outfit', sans-serif;
+
+        --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
+      }
+
+      /* 
+=======================
+Setup
+=======================
+*/
+
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+        margin: 0;
+      }
+
+      body {
+        background-color: var(--var-main-darkest);
+      }
+
+      img {
+        width: 100%;
+        border-radius: 15px;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      /* 
+
+Eye view
+
+https://i.postimg.cc/9MtT4GZY/view.png' border='0' alt='view */
+
+      /*
+=========================
+Font Styling
+=========================
+*/
+
+      h1 {
+        font: var(--var-heading);
+        color: var(--var-lightest);
+        padding: 1.2em 0;
+      }
+
+      h2 {
+        font: var(--var-small-heading);
+        color: var(--var-lightest);
+        /* padding on .coin-base */
+      }
+
+      p {
+        font: var(--var-para);
+        color: var(--var-soft-blue);
+      }
+
+      span {
+        color: white;
+      }
+      /* 
+=====================
+Classes
+=====================
+*/
+
+      /* LAYOUT */
+
+      .card-container {
+        width: 100%;
+        max-width: 400px;
+        margin: 2em auto;
+        background-color: var(--var-card-dark);
+        border-radius: 15px;
+        margin-bottom: 1rem;
+        padding: 2rem;
+      }
+
+      div.flex-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      div.coin-base,
+      .time-left,
+      .card-attribute {
+        display: flex;
+        align-items: center;
+        padding: 1em 0;
+      }
+
+      .card-attribute {
+        padding-bottom: 1.5em;
+        border-top: 2px solid var(--var-line-dark);
+      }
+
+      a.hero-image-container {
+        position: relative;
+        display: block;
+      }
+
+      /* Details */
+
+      img.eye {
+        position: absolute;
+        width: 100%;
+        max-width: 2em;
+        top: 44%;
+        left: 43%;
+      }
+
+      @media (min-width: 400px) {
+        img.eye {
+          max-width: 3em;
+        }
+      }
+
+      .hero-image-container::after {
+        content: '';
+        background-image: url('https://i.postimg.cc/9MtT4GZY/view.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 5rem;
+        background-color: hsla(178, 100%, 50%, 0.3);
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+      }
+
+      .hero-image-container:hover::after {
+        opacity: 1;
+      }
+
+      .small-image {
+        width: 1.2em;
+        margin-right: 0.5em;
+      }
+
+      .small-avatar {
+        width: 2em;
+        border-radius: 200px;
+        outline: 2px solid white;
+        margin-right: 1.4em;
+      }
+
+      div.attribution {
+        margin: 0 auto;
+        width: 100%;
+        font: var(--var-para);
+        text-align: center;
+        padding: 1.5em 0 4em 0;
+        color: var(--var-line-dark);
+      }
+      .attribution a {
+        color: var(--var-soft-blue);
+      }
+
+      @media (min-width: 600px) {
+        body {
+          font-size: 18px;
+        }
+      }
     </style>
     <link
       rel="stylesheet"
@@ -6963,7 +7174,7 @@
                 >
                   <ul
                     id="menu-1-dti0xaef"
-                    class="twbb-nav-menu twbb-menu_term_id-5"
+                    class="navbar navbar-expand-sm bg-light"
                   >
                     <li
                       class="ai-recreated-menu-item twbb_menu_order_1 menu-item menu-item-type-custom menu-item-object-custom menu-item-51"
@@ -7677,7 +7888,7 @@
         </div>
       </div>
       <!--Graficos-->
-      <div class="elementor-element">
+      <!-- <div class="elementor-element">
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
@@ -7740,7 +7951,7 @@
               <div class="card">
                 <div class="card-body">
                   <div id="myPlot3">
-                    <di class="col-6">
+                    <di class="col-7">
                       <script>
                         const xArray3 = ['Civil', 'Religioso', 'Total']
                         const yArray3 = [55, 40, 95]
@@ -7763,6 +7974,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col-sm-6">
               <div class="card">
                 <div class="card-body">
@@ -7778,7 +7990,7 @@
           </div>
         </div>
       </div>
-
+    -->
       <!--Fim Gráficos-->
       <div
         class="elementor-element elementor-element-IUz0Bld8 e-flex e-con-boxed e-con e-parent"
@@ -8317,6 +8529,8 @@
               <a
                 href="#"
                 class="list-group-item list-group-item-action list-group-item-secondary"
+                data-bs-toggle="modal"
+                data-bs-target="#myModalSub"
                 >PONCIANA PIÊTRA ALVES E OLIVEIRA - Substituta</a
               >
               <a
@@ -8340,35 +8554,68 @@
           <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-              <h4 class="modal-title">Horário de Funcionamento</h4>
-              <button
+              <h4 class="modal-title">Oficial</h4>
+              <button 
                 type="button"
                 class="btn btn-light"
                 data-bs-dismiss="modal"
-              ></button>
+              ><i class="fa-solid fa-circle-xmark"></i></button>
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
-              <p align="center">
-                <strong>De segunda à Sexta das 8h às 16h</strong><br />
-                OBS: Não fechamos pra almoço!
-              </p>
-              <p align="center">
-                Para atendimento aos fins de semanas e feriados, entre em
-                Contato pelos nossos Canais de Comunicação.
-              </p>
-            </div>
+              <div class="card-container">
+                <a href="#" class="hero-image-container">
+                  <img class="hero-image" src="https://github.com/dimviana/rcpnsite/blob/main/images/Oficial.png?raw=true"/>
+                </a>
+                <main class="main-content">
+                <h1><a href="#">José Elton dos Santos Batista de Oliveira </a></h1>
+                  <p>O Oficial de Registro Civil é o profissional do direito, aprovado em concurso público que, por delegação do poder judiciário, exerce a função de lavrar atos dotados de fé pública, conferindo-lhes autenticidade.</p>
+            <div class="flex-row">
+          </div>
+        </main>
+      
+                </div>
+                </div>
+              </div>
 
             <!-- Modal footer -->
-            <div class="modal-footer">
-              <a
-                href="https://sites.google.com/view/registro-civil-das-pessoas-nat/home"
-                class="btn btn-primary"
-                target="_blank"
-                >CONTATOS</a
-              >
+            
+          </div>
+        </div>
+        <!-- The Modal Substituta-->
+      <div class="modal fade" id="myModalSub">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Substituta</h4>
+              <button 
+                type="button"
+                class="btn btn-light"
+                data-bs-dismiss="modal"
+              ><i class="fa-solid fa-circle-xmark"></i></button>
             </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              <div class="card-container">
+                <a href="#" class="hero-image-container">
+                  <img class="hero-image" src="https://github.com/dimviana/rcpnsite/blob/main/images/Oficial.png?raw=true"/>
+                </a>
+                <main class="main-content">
+                <h1><a href="#">Ponciana Piêtra Alves e Oliveira</a></h1>
+                  <p>A Substituta de Registro Civil, Nomeada pelo CNJ, por delegação do poder judiciário, exerce a função de lavrar atos dotados de fé pública, conferindo-lhes autenticidade.</p>
+            <div class="flex-row">
+          </div>
+        </main>
+      
+                </div>
+                </div>
+              </div>
+
+            <!-- Modal footer Substituta-->
+            
           </div>
         </div>
       </div>
